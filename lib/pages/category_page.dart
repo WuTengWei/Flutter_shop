@@ -228,6 +228,9 @@ class CategoryGoodsList extends StatefulWidget {
 }
 
 class _CategoryGoodsListState extends State<CategoryGoodsList> {
+  GlobalKey<RefreshFooterState> _footerkey =
+      new GlobalKey<RefreshFooterState>();
+  var scrollController = new ScrollController();
   @override
   void initState() {
     super.initState();
@@ -244,10 +247,27 @@ class _CategoryGoodsListState extends State<CategoryGoodsList> {
               width: ScreenUtil().setWidth(570),
               // 可能会有高度溢出的问题，使用 expanded 解决
 //          height: ScreenUtil().setHeight(1000),
-              child: ListView.builder(
-                itemCount: data.goodsList.length,
-                itemBuilder: (context, index) {
-                  return _listWidget(data.goodsList, index);
+              child: EasyRefresh(
+                refreshFooter: ClassicsFooter(
+                  key: _footerkey,
+                  bgColor: Colors.white,
+                  textColor: Colors.pink,
+                  moreInfoColor: Colors.pink,
+                  showMore: true,
+                  noMoreText: Provide.value<ChildCategory>(context).noMoreText,
+                  moreInfo: '加载中...',
+                  loadReadyText: '上拉加载...',
+                ),
+                child: ListView.builder(
+                  controller: scrollController,
+                  itemCount: data.goodsList.length,
+                  itemBuilder: (context, index) {
+                    return _listWidget(data.goodsList, index);
+                  },
+                ),
+                loadMore: () async {
+                  print("上拉加载更多");
+                  _getMoreList();
                 },
               ),
             ),
@@ -257,6 +277,29 @@ class _CategoryGoodsListState extends State<CategoryGoodsList> {
         }
       },
     );
+  }
+
+  // 加载更多
+  void _getMoreList() async {
+    Provide.value<ChildCategory>(context).addPage();
+    var data = {
+      'categoryId': Provide.value<ChildCategory>(context).categoryId,
+      'categorySubId': Provide.value<ChildCategory>(context).subId,
+      'page': Provide.value<ChildCategory>(context).page
+    };
+
+    await request(servicePath['getMallGoods'], formData: data).then((val) {
+      var data = json.decode(val.toString());
+      CategoryGoodsListModel goodsList = CategoryGoodsListModel.fromJson(data);
+      // 处理数据为空的情况
+      if (goodsList.data == null) {
+        // Provide.value<CategoryGoodsListProvide>(context).getGoodsList([]);
+        Provide.value<ChildCategory>(context).changeNoMoreText("没有更多数据了");
+      } else {
+        Provide.value<CategoryGoodsListProvide>(context)
+            .getMoreGoodsList(goodsList.data);
+      }
+    });
   }
 
   // 商品图片
