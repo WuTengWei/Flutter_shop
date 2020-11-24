@@ -56,6 +56,12 @@
       "languageVersion": "2.2"
     },
     {
+      "name": "fluro",
+      "rootUri": "file:///Users/wtw/Documents/development/flutter/.pub-cache/hosted/pub.flutter-io.cn/fluro-1.7.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
+    },
+    {
       "name": "flutter",
       "rootUri": "file:///Users/wtw/Documents/development/flutter/packages/flutter",
       "packageUri": "lib/",
@@ -92,6 +98,18 @@
       "languageVersion": "2.2"
     },
     {
+      "name": "flutter_web_plugins",
+      "rootUri": "file:///Users/wtw/Documents/development/flutter/packages/flutter_web_plugins",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
+      "name": "fluttertoast",
+      "rootUri": "file:///Users/wtw/Documents/development/flutter/.pub-cache/hosted/pub.flutter-io.cn/fluttertoast-7.1.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
+    },
+    {
       "name": "http_parser",
       "rootUri": "file:///Users/wtw/Documents/development/flutter/.pub-cache/hosted/pub.flutter-io.cn/http_parser-3.1.4",
       "packageUri": "lib/",
@@ -114,6 +132,12 @@
       "rootUri": "file:///Users/wtw/Documents/development/flutter/.pub-cache/hosted/pub.flutter-io.cn/path-1.7.0",
       "packageUri": "lib/",
       "languageVersion": "2.0"
+    },
+    {
+      "name": "plugin_platform_interface",
+      "rootUri": "file:///Users/wtw/Documents/development/flutter/.pub-cache/hosted/pub.flutter-io.cn/plugin_platform_interface-1.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
     },
     {
       "name": "provide",
@@ -177,9 +201,39 @@
     },
     {
       "name": "url_launcher",
-      "rootUri": "file:///Users/wtw/Documents/development/flutter/.pub-cache/hosted/pub.flutter-io.cn/url_launcher-5.1.2",
+      "rootUri": "file:///Users/wtw/Documents/development/flutter/.pub-cache/hosted/pub.flutter-io.cn/url_launcher-5.7.6",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "2.1"
+    },
+    {
+      "name": "url_launcher_linux",
+      "rootUri": "file:///Users/wtw/Documents/development/flutter/.pub-cache/hosted/pub.flutter-io.cn/url_launcher_linux-0.0.1+4",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
+      "name": "url_launcher_macos",
+      "rootUri": "file:///Users/wtw/Documents/development/flutter/.pub-cache/hosted/pub.flutter-io.cn/url_launcher_macos-0.0.1+9",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
+      "name": "url_launcher_platform_interface",
+      "rootUri": "file:///Users/wtw/Documents/development/flutter/.pub-cache/hosted/pub.flutter-io.cn/url_launcher_platform_interface-1.0.8",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
+      "name": "url_launcher_web",
+      "rootUri": "file:///Users/wtw/Documents/development/flutter/.pub-cache/hosted/pub.flutter-io.cn/url_launcher_web-0.1.4+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.2"
+    },
+    {
+      "name": "url_launcher_windows",
+      "rootUri": "file:///Users/wtw/Documents/development/flutter/.pub-cache/hosted/pub.flutter-io.cn/url_launcher_windows-0.0.1+3",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
     },
     {
       "name": "vector_math",
@@ -194,7 +248,7 @@
       "languageVersion": "2.1"
     }
   ],
-  "generated": "2020-09-12T08:20:31.410479Z",
+  "generated": "2020-11-24T12:44:21.729564Z",
   "generator": "pub",
   "generatorVersion": "2.9.0"
 }

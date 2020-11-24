@@ -4,6 +4,7 @@ import 'package:provide/provide.dart';
 import 'pages/index_page.dart';
 import './provide/child_category.dart';
 import './provide/category_goods_list.dart';
+import 'package:fluro/fluro.dart';
 
 void main() {
   var childCategory = ChildCategory();
