@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
 import '../config/service_url.dart';
+import '../routers/application.dart';
 
 // https://jspang.com/posts/2019/03/01/flutter-shop.html#第11节：首页-屏幕适配方案和制作
 
@@ -203,6 +204,9 @@ class _HomePageState extends State<HomePage>
         return InkWell(
             onTap: () {
               print('点击了火爆商品');
+              // 点击路由跳转
+              Application.router
+                  .navigateTo(context, '/details?id=${val['goodsId']}');
             },
             child: Container(
               width: ScreenUtil().setWidth(372),

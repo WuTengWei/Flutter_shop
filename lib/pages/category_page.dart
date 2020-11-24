@@ -51,7 +51,6 @@ class __LeftCatgegoryNavStateState extends State<_LeftCatgegoryNavState> {
   void initState() {
     _getCategory();
     _getGoodList();
-    // TODO: implement initState
     super.initState();
   }
 

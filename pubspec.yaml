@@ -30,7 +30,8 @@ dependencies:
   flutter_easyrefresh: ^1.2.7 # 刷新控件
   provide: ^1.0.2
   fluttertoast: ^7.1.4
-  fluro: "^1.7.7"
+  fluro: ^1.7.6
+
 
 
 
