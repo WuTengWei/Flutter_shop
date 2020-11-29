@@ -31,6 +31,9 @@ dependencies:
   provide: ^1.0.2
   #fluttertoast: ^7.1.4
   fluro: ^1.7.7
+  flutter_html: ^0.9.6
+  shared_preferences: ^0.5.1
+
 
 
 
